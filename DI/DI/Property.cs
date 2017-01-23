@@ -11,11 +11,18 @@ namespace DI.Property
         void Serve();
     }
 
-    public class Service : IService
+    public class Service1 : IService
     {
         public void Serve()
         {
-            Console.WriteLine("Service called");
+            Console.WriteLine("Service1 called");
+        }
+    }
+    public class Service2 : IService
+    {
+        public void Serve()
+        {
+            Console.WriteLine("Service2 called");
         }
     }
 
@@ -25,7 +32,12 @@ namespace DI.Property
 
         public IService Service { set { this._service = value; } }
 
-        public void Start()
+        public void Start1()
+        {
+            Console.WriteLine("Service started");
+            _service.Serve();
+        }
+        public void Start2()
         {
             Console.WriteLine("Service started");
             _service.Serve();

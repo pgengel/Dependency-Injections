@@ -14,8 +14,8 @@ namespace DI
             Console.ReadKey();
 
             Property.Client clientProp = new Property.Client();
-            clientProp.Service = new Property.Service();
-            clientProp.Start();
+            clientProp.Service = new Property.Service1();
+            clientProp.Start1();
             Console.ReadKey();
 
             DI.Method.Client clientMet = new DI.Method.Client();
