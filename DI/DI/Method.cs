@@ -16,4 +16,14 @@ namespace DI.Method
         }
     }
 
+    public class Client
+    {
+        private IService _service;
+        public void Start(IService service)
+        {
+            this._service = service;
+            this._service.Serve();
+        }
+    }
+
 }

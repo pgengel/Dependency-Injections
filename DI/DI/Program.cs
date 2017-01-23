@@ -1,6 +1,7 @@
 ﻿
 using System;
 
+
 namespace DI
 {
     class Program
@@ -14,6 +15,11 @@ namespace DI
 
             Property.Client clientProp = new Property.Client();
             clientProp.Service = new Property.Service();
+            Console.ReadKey();
+
+            DI.Method.Client clientMet = new DI.Method.Client();
+            clientMet.Start(new Method.Service());
+            Console.ReadKey();
 
         }
     }
