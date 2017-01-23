@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DI.Property
 {
@@ -15,14 +11,14 @@ namespace DI.Property
     {
         public void Serve()
         {
-            Console.WriteLine("Service1 called");
+            Console.WriteLine("Property Service1 called");
         }
     }
     public class Service2 : IService
     {
         public void Serve()
         {
-            Console.WriteLine("Service2 called");
+            Console.WriteLine("Property Service2 called");
         }
     }
 

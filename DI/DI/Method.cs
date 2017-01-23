@@ -11,7 +11,7 @@ namespace DI.Method
     {
         public void Serve()
         {
-            Console.WriteLine("Service Called");
+            Console.WriteLine("Service Method Called");
 
         }
     }
