@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace DI
 {
@@ -7,9 +8,12 @@ namespace DI
 
         static void Main(string[] args)
         {
-            Client client = new Client(new Service());
-            client.Start();
+            Constructor.Client clientCon = new Constructor.Client(new Constructor.Service());
+            clientCon.Start();
             Console.ReadKey();
+
+            Property.Client clientProp = new Property.Client();
+            clientProp.Service = new Property.Service();
 
         }
     }

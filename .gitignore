@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/DI/DI/Properties/AssemblyInfo.cs
+/DI/DI/App.config

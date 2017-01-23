@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DI.Constructor
+namespace DI.Property
 {
     public interface IService
     {
@@ -15,7 +15,7 @@ namespace DI.Constructor
     {
         public void Serve()
         {
-            Console.WriteLine("Service has been called");
+            Console.WriteLine("Service called");
         }
     }
 
@@ -23,18 +23,14 @@ namespace DI.Constructor
     {
         private IService _service;
 
-        public Client(IService service)
-        {
-            this._service = service;
-        }
+        public IService Service { set { this._service = value; } }
 
         public void Start()
         {
-            Console.WriteLine("Service Started");
-            this._service.Serve();
-            //To Do: Some Stuff
+            Console.WriteLine("Service started");
+            _service.Serve();
         }
-    }
 
+    }
 
 }
